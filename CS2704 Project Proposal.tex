@@ -1,0 +1,83 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.21 of 2022/01/12
+%
+\documentclass[runningheads]{llncs}
+%
+\usepackage[T1]{fontenc}
+% T1 fonts will be used to generate the final print and online PDFs,
+% so please use T1 fonts in your manuscript whenever possible.
+% Other font encondings may result in incorrect characters.
+%
+\usepackage{graphicx}
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+%
+% If you use the hyperref package, please uncomment the following two lines
+% to display URLs in blue roman font according to Springer's eBook style:
+%\usepackage{color}
+%\renewcommand\UrlFont{\color{blue}\rmfamily}
+%\urlstyle{rm}
+%
+\begin{document}
+%
+\title{CS-2704 Final Project Proposal}
+%
+%\titlerunning{Abbreviated paper title}
+% If the paper title is too long for the running head, you can set
+% an abbreviated paper title here
+%
+\author{Jamie Greening\inst{1}\orcidID{3543841}}
+%
+\authorrunning{J. Greening}
+% First names are abbreviated in the running head.
+% If there are more than two authors, 'et al.' is used.
+%
+\institute{University of New Brunswick Saint John, Saint John NB E2L 4L5, CAN
+\email{jgreenin@unb.ca}}
+%
+\maketitle              % typeset the header of the contribution
+%
+%\begin{abstract}
+%The abstract should briefly summarize the contents of the paper in
+%150--250 words.
+
+%\keywords{First keyword  \and Second keyword \and Another keyword.}
+%\end{abstract}
+%
+%
+%
+\section{Group Members}
+\begin{itemize}
+    \item Jamie Greening
+\end{itemize}
+
+\section{Datasets}
+The two datasets I will be using are:
+\begin{itemize}
+    \item National Collision data, from the National Collision Database \cite{ref_url1}
+    \item Monthly average retail prices for gasoline and fuel oil, by geography \cite{ref_url2}
+\end{itemize}
+
+\section{Github Repository}
+Here is the GitHub repository: \url{https://github.com/vertesemash/CS2704-Final-Project-JG}
+
+\section{Hypothesis}
+My hypothesis is that we will be able to see some form of association between lower gas prices and increased road collisions. When gas prices are lower, more people might be interested in driving when otherwise they might have stayed in. Trivial road trips might occur more frequently, meaning road collisions would be more likely. Granted, there are other variables that could be at play so the association may be weak or harder to see, but I'm hoping to see something like prolonged monthly price decreases associated with a rise in collisions in this same period. 
+%
+% ---- Bibliography ----
+%
+% BibTeX users should specify bibliography style 'splncs04'.
+% References will then be sorted and formatted in the correct style.
+%
+% \bibliographystyle{splncs04}
+% \bibliography{mybibliography}
+%
+\begin{thebibliography}{8}
+\bibitem{ref_url1}
+Transport Canada: National Collision Database Online. Online. \url{https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en}, last accessed 2025-03-28
+
+\bibitem{ref_url2}
+Statistics Canada: Monthly average retail prices for gasoline and fuel oil, by geography. Online. \url{https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1810000101}, last accessed 2025-03-28
+\end{thebibliography}
+\end{document}
