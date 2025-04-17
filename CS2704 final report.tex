@@ -100,33 +100,26 @@ Next, both variables were charted together in figure \ref{fig:both-label} and \r
 
 Over the last two decades, it appears that monthly collisions have trended down as gas prices have gone up. Unfortunately, collision data is only available up until around 2022, so the potential effect of the large spike in gas prices after that same period on collisions cannot be determined.
 
-Using Linear Regression, a model was created and tested using average gas prices by month as the predictor variable and number of collisions by month as the outcome variable. The model was tested with a variety of test sizes, as can be seen below in figures \ref{fig:r2-label} and \ref{fig:accuracy-label}. From this, it appears that our linear regression model was not particularly accurate when it came to predicting the number of collisions based on gas prices as input. With a test size of 0.3 and 0.45, the \(R^2\) score gets close to 0 (indicating how a baseline model would do) but never reaches it. Notably, the \(R^2\) appears to vary greatly - when the test was ran at 5:02 PM on April 16 2025, the \(R^2\) for one test size appears to surpass the performance of a baseline model as can be seen in figure \ref{fig:r2_later_label}. This would seem to indicate that gas prices are not particularly predictive when it comes to the number of collisions per month.
-
+Using Linear Regression, a model was created and tested using average gas prices by month as the predictor variable and number of collisions by month as the outcome variable. The model was tested with a variety of test sizes, as can be seen below in figures \ref{fig:r2-label} and \ref{fig:r2-label-2}. From this, it appears that the linear regression model was able to predict
+values better than a baseline model, as all \(R^2\) values are above 0 for each test size. 
 \begin{figure}
     \centering
-    \includegraphics[scale=0.75]{R2_CHART.png}   
-    \caption{\(R^2\) score by test size, ran at 4:52 PM on April 16 2025}
+    \includegraphics[scale=0.75]{LinRegChart1055Apr17.png}   
+    \caption{\(R^2\) score by test size, ran at 10:55 AM on April 17 2025}
     \label{fig:r2-label}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[scale=0.75]{Accuracy_Chart.png}   
-    \caption{Accuracy score by test size}
-    \label{fig:accuracy-label}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[scale=0.75]{R2_502pm.png}   
-    \caption{\(R^2\) score by test size, ran at 5:02 PM on April 16 2025}
-    \label{fig:r2_later_label}
+    \includegraphics[scale=0.75]{LinRegChart1105Apr17.png}   
+    \caption{\(R^2\) score by test size, ran at 11:05 AM on April 17 2025}
+    \label{fig:r2-label-2}
 \end{figure}
 
 \section{Conclusion}
-Based on the results of the analysis done, it does not appear there is a particularly strong or predictive relationship between gas prices and number of collisions. While there was some variance in \(R^2\) when tests were repeatedly done, it appears the Linear Regression model at its best will only perform marginally better than a baseline model. Notably, per figure \ref{fig:accuracy-label}, it does not appear the model was ever accurate (per sklearn's accuracy\_score method). While it could appear there is a relationship between the two based on figures \ref{fig:both-label} and \ref{fig:scatter-label}, there also appears to be a lot of variance - notably, there are periodic increases and declines in collisions within every year. Further research and experimentation could be done with the additional data that the National Collision Database\cite{ref_url1} can provide. As an example, could gas prices have more of a relationship with the severity of a crash (lower gas prices, potentially more risky driving and speeding, increase in fatalities)? 
+Based on the results of the analysis done, it appears there is some sort of predictive relationship between gas prices and number of collisions. The linear regression model's \(R^2\) scores stayed above 0 no matter the test size, indicating the model performed better than a baseline model. This validates the relationship we can see in figures \ref{fig:both-label} and \ref{fig:scatter-label}, but there also appears to be a lot of variance - notably, there are periodic increases and declines in collisions within every year when looking at the line plot. Further research and experimentation could be done with the additional data that the National Collision Database\cite{ref_url1} can provide. As an example, could gas prices have more of a relationship with the severity of a crash (lower gas prices, potentially more risky driving and speeding, increase in fatalities)? 
 
-Code can be looked at via the GitHub repository for this project \cite{ref_url3}.
+Code can be examined via the GitHub repository for this project \cite{ref_url3}.
 %
 % ---- Bibliography ----
 %
